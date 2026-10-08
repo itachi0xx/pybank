@@ -1,13 +1,13 @@
 class Account:
-    def __init__(self, owner_name, account_number):
+    def __init__(self, customer_id, account_number):
 
-        self._owner_name = owner_name
+        self._customer_id = customer_id
         self._account_number = account_number
         self._balance = 0
 
     @property
-    def owner_name(self):
-        return self._owner_name
+    def customer_id(self):
+        return self._customer_id
 
     @property
     def account_number(self):
@@ -18,9 +18,6 @@ class Account:
     def balance(self):
        return self._balance
 
-    @owner_name.setter
-    def owner_name(self, owner_name):
-        self._owner_name = owner_name
 
 
     def deposit(self, amount):
@@ -48,7 +45,7 @@ class Account:
 
 
 def main():
-    account = Account("atia", 1)
+    account = Account(1, 1)
 
 
     # 1. Valid deposit
